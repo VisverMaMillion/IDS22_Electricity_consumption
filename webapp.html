@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Energy consumption calculator for Finland</title>
+</head>
+<body>
+<h1>Energy consumption calculator for Finland</h1>
+<p>Temperature (Celcius):<p>
+    <input type="text" id="Temperature"><br/>
+<p>Precipitation (mm):<p>
+    <input type="text" id="Precipitation"><br/>
+<p><p>
+    <input type="button" value="Calculate electricity consumption" onclick="calcSum()"><br/>
+<p>Predicted electricity consumption (MWh/h):<p>
+    <input type="text" id="Electricity consumption"><br/>
+    
+    <script>
+    function calcSum(){
+    let box1 = document.getElementById("Temperature").value;
+    let box2 = document.getElementById("Precipitation").value;
+    let sum = -122.7502*Number(box1) + 6.2149*Number(box2) + 10140.8237;
+    document.getElementById("Electricity consumption").value = sum.toFixed(0);
+    }
+    </script>
+
+<p>Made by Harri Karhinen, Niklas Karlsson and Elina Zetterman<p>
+
+</body>
+
+</html>
